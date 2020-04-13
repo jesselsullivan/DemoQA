@@ -24,7 +24,7 @@ namespace DemoQA
                 AppHost = AppHost,
                 SSL = AppHost.Contains("https"),
                 Port = Port,
-                Browser = GetBrowser(BrowserChoice),
+                Browser = GetBrowser(BrowserChoice)
             };
             
             Instance = new BrowserSession(sessionConfiguration);

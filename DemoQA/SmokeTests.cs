@@ -1,6 +1,5 @@
 ﻿using DemoQA.Pages;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using FluentAssertions;
 
 namespace DemoQA
@@ -19,8 +18,8 @@ namespace DemoQA
         {
             var browser = new TestBrowser();
             browser.Initialize();
-            var homePage = new HomePage(browser);
-            homePage.Visit().Should().BeTrue();
+            new HomePage(browser).Visit()
+                .Should().BeTrue();
             browser.Close();
         }
 
@@ -30,8 +29,8 @@ namespace DemoQA
         {
             var browser = new TestBrowser();
             browser.Initialize();
-            var interactionsPage = new InteractionsPage(browser);
-            interactionsPage.Visit().Should().BeTrue();
+            new InteractionsPage(browser).Visit()
+                .Should().BeTrue();
             browser.Close();
         }
         
@@ -41,8 +40,8 @@ namespace DemoQA
         {
             var browser = new TestBrowser();
             browser.Initialize();
-            var interactionsPage = new InteractionsPage(browser);
-            interactionsPage.Visit("Sortable").Should().BeTrue();
+            new InteractionsPage(browser).Visit("Sortable")
+                .Should().BeTrue();
             browser.Close();
         }
         
@@ -52,8 +51,8 @@ namespace DemoQA
         {
             var browser = new TestBrowser();
             browser.Initialize();
-            var interactionsPage = new InteractionsPage(browser);
-            interactionsPage.Visit("Selectable").Should().BeTrue();
+            new InteractionsPage(browser).Visit("Selectable")
+                .Should().BeTrue();
             browser.Close();
         }
         
@@ -63,8 +62,8 @@ namespace DemoQA
         {
             var browser = new TestBrowser();
             browser.Initialize();
-            var interactionsPage = new InteractionsPage(browser);
-            interactionsPage.Visit("Resizable").Should().BeTrue();
+            new InteractionsPage(browser).Visit("Resizable")
+                .Should().BeTrue();
             browser.Close();
         }
         
@@ -74,8 +73,8 @@ namespace DemoQA
         {
             var browser = new TestBrowser();
             browser.Initialize();
-            var interactionsPage = new InteractionsPage(browser);
-            interactionsPage.Visit("Droppable").Should().BeTrue();
+            new InteractionsPage(browser).Visit("Droppable")
+                .Should().BeTrue();
             browser.Close();
         }
         
@@ -85,8 +84,8 @@ namespace DemoQA
         {
             var browser = new TestBrowser();
             browser.Initialize();
-            var interactionsPage = new InteractionsPage(browser);
-            interactionsPage.Visit("Draggable").Should().BeTrue();
+            new InteractionsPage(browser).Visit("Draggable")
+                .Should().BeTrue();
             browser.Close();
         }
     }

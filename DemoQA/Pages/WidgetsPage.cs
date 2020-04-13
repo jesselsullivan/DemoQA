@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DemoQA.Pages
+﻿namespace DemoQA.Pages
 {
-    class WidgetsPage
+    internal class WidgetsPage
     {
     }
 }
