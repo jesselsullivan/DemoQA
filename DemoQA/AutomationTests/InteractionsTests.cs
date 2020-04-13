@@ -4,7 +4,7 @@ using FluentAssertions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
-namespace DemoQA
+namespace DemoQA.AutomationTests
 {
     [TestFixture]
     [Timeout(30000)]

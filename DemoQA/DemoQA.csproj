@@ -63,14 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutomationTests\AutomationPracticeSwitchWindowsTests.cs" />
     <Compile Include="Pages\HomePage.cs" />
-    <Compile Include="InteractionsTests.cs" />
+    <Compile Include="Pages\WidgetPages\AutomationPracticeSwitchWindowsPage.cs" />
+    <Compile Include="AutomationTests\InteractionsTests.cs" />
     <Compile Include="Pages\InteractionsPage.cs" />
-    <Compile Include="Pages\WidgetsPage.cs" />
-    <Compile Include="SmokeTests.cs" />
+    <Compile Include="AutomationTests\SmokeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBrowser.cs" />
-    <Compile Include="WidgetsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

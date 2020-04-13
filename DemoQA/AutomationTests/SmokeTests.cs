@@ -1,14 +1,16 @@
 ﻿using DemoQA.Pages;
+using DemoQA.Pages.WidgetPages;
 using NUnit.Framework;
 using FluentAssertions;
 
-namespace DemoQA
+namespace DemoQA.AutomationTests
 {
     
     [TestFixture]
     [Parallelizable]
     [Timeout(15000)]
     [Category("Smoke Tests")]
+    [Order(1)]
     public class SmokeTests
     {
 
@@ -85,6 +87,17 @@ namespace DemoQA
             var browser = new TestBrowser();
             browser.Initialize();
             new InteractionsPage(browser).Visit("Draggable")
+                .Should().BeTrue();
+            browser.Close();
+        }
+
+        [Test]
+        [Parallelizable]
+        public void UserCanVisitAutomationPracticeSwitchWindows()
+        {
+            var browser = new TestBrowser();
+            browser.Initialize();
+            new AutomationPracticeSwitchWindowsPage(browser).Visit()
                 .Should().BeTrue();
             browser.Close();
         }
