@@ -13,6 +13,7 @@ namespace DemoQA.AutomationTests
     {
 
         [Test]
+        [Parallelizable]
         public void UserCanSortItems()
         {
             var browser = new TestBrowser();
@@ -34,6 +35,7 @@ namespace DemoQA.AutomationTests
         }
 
         [Test]
+        [Parallelizable]
         [Ignore("Not Implemented Yet")]
         public void UserCanSelectItems()
         {
@@ -46,6 +48,7 @@ namespace DemoQA.AutomationTests
         }
 
         [Test]
+        [Parallelizable]
         [Ignore("Not Implemented Yet")]
         public void UserCanResizeItems()
         {
@@ -58,6 +61,7 @@ namespace DemoQA.AutomationTests
         }
 
         [Test]
+        [Parallelizable]
         [Ignore("Not Implemented Yet")]
         public void UserCanDropItems()
         {
@@ -70,6 +74,7 @@ namespace DemoQA.AutomationTests
         }
 
         [Test]
+        [Parallelizable]
         [Ignore("Not Implemented Yet")]
         public void UserCanDragItems()
         {
