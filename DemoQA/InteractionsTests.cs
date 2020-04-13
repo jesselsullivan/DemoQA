@@ -1,40 +1,43 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using FluentAssertions;
 
 namespace DemoQA
 {
-    [TestClass]
-    [TestCategory("Interactions Tests")]
+    [TestFixture]
     public class InteractionsTests
     {
-        [TestMethod]
+        [Test]
         public void UserCanSortItems()
         {
-            throw new NotImplementedException();
+            string targetUrl = "https://demoqa.com/sortable/";
+            IWebDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl(targetUrl);
+
+
         }
 
-        [TestMethod]
+        [Test]
         public void UserCanSelectItems()
         {
             throw new NotImplementedException();
         }
 
-        [TestMethod]
+        [Test]
         public void UserCanResizeItems()
         {
             throw new NotImplementedException();
         }
 
-        [TestMethod]
+        [Test]
         public void UserCanDropItems()
         {
             throw new NotImplementedException();
         }
 
-        [TestMethod]
+        [Test]
         public void UserCanDragItems()
         {
             throw new NotImplementedException();

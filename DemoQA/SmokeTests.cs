@@ -1,35 +1,93 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using DemoQA.Pages;
+using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using FluentAssertions;
 
 namespace DemoQA
 {
     
-    [TestClass]
-    [TestCategory("Smoke Tests")]
+    [TestFixture]
+    [Parallelizable]
+    [Timeout(15000)]
+    [Category("Smoke Tests")]
     public class SmokeTests
     {
-        [TestMethod]
+
+        [Test]
+        [Parallelizable]
         public void UserCanVisitHome()
         {
-            string targetUrl = "https://demoqa.com/";
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(targetUrl);
-            var resultUrl = driver.Url;
-            resultUrl.Should().BeEquivalentTo(targetUrl);
-            driver.Close();
+            var browser = new TestBrowser();
+            browser.Initialize();
+            var homePage = new HomePage(browser);
+            homePage.Visit().Should().BeTrue();
+            browser.Close();
         }
 
-        [TestMethod]
+        [Test]
+        [Parallelizable]
         public void UserCanVisitInteractions()
         {
-            string targetUrl = "https://demoqa.com/category/interactions/";
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(targetUrl);
-            var resultUrl = driver.Url;
-            resultUrl.Should().BeEquivalentTo(targetUrl);
-            driver.Close();
+            var browser = new TestBrowser();
+            browser.Initialize();
+            var interactionsPage = new InteractionsPage(browser);
+            interactionsPage.Visit().Should().BeTrue();
+            browser.Close();
+        }
+        
+        [Test]
+        [Parallelizable]
+        public void UserCanVisitSortable()
+        {
+            var browser = new TestBrowser();
+            browser.Initialize();
+            var interactionsPage = new InteractionsPage(browser);
+            interactionsPage.Visit("Sortable").Should().BeTrue();
+            browser.Close();
+        }
+        
+        [Test]
+        [Parallelizable]
+        public void UserCanVisitSelectable()
+        {
+            var browser = new TestBrowser();
+            browser.Initialize();
+            var interactionsPage = new InteractionsPage(browser);
+            interactionsPage.Visit("Selectable").Should().BeTrue();
+            browser.Close();
+        }
+        
+        [Test]
+        [Parallelizable]
+        public void UserCanVisitResizable()
+        {
+            var browser = new TestBrowser();
+            browser.Initialize();
+            var interactionsPage = new InteractionsPage(browser);
+            interactionsPage.Visit("Resizable").Should().BeTrue();
+            browser.Close();
+        }
+        
+        [Test]
+        [Parallelizable]
+        public void UserCanVisitDroppable()
+        {
+            var browser = new TestBrowser();
+            browser.Initialize();
+            var interactionsPage = new InteractionsPage(browser);
+            interactionsPage.Visit("Droppable").Should().BeTrue();
+            browser.Close();
+        }
+        
+        [Test]
+        [Parallelizable]
+        public void UserCanVisitDraggable()
+        {
+            var browser = new TestBrowser();
+            browser.Initialize();
+            var interactionsPage = new InteractionsPage(browser);
+            interactionsPage.Visit("Draggable").Should().BeTrue();
+            browser.Close();
         }
     }
 }

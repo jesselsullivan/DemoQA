@@ -1,6 +1,7 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using NUnit.Framework;
 
 [assembly: AssemblyTitle("DemoQA")]
 [assembly: AssemblyDescription("")]
@@ -10,6 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: LevelOfParallelism(10)]
 
 [assembly: ComVisible(false)]
 

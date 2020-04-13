@@ -1,12 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using FluentAssertions;
 
 namespace DemoQA
 {
-    [TestClass]
-    [TestCategory("Widgets Tests")]
+    [TestFixture]
     public class WidgetsTests
     {
 
