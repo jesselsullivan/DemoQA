@@ -30,7 +30,7 @@ namespace DemoQA.Pages.WidgetPages
         {
             NewBrowserWindow.Click();
             driver.SwitchTo().Window(driver.WindowHandles.Last());
-            if (driver.Url == "http://toolsqa.com/")
+            if (!driver.Url.Contains("://demoqa.com"))
                 return true;
             return false;
         }
@@ -47,7 +47,7 @@ namespace DemoQA.Pages.WidgetPages
         {
             NewBrowserTab.Click();
             driver.SwitchTo().Window(driver.WindowHandles.Last());
-            if (driver.Url == "http://toolsqa.com/")
+            if (!driver.Url.Contains("://demoqa.com"))
                 return true;
             return false;
         }
